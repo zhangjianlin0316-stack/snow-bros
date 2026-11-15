@@ -1,0 +1,71 @@
+html, body {
+  margin: 0;
+  height: 100%;
+  background: #05070e;
+  overflow: hidden;
+  color: #eef6ff;
+  font-family: "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+#stage {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+}
+
+canvas {
+  display: block;
+  background: #000;
+  width: min(100vw, calc(100vh * 16 / 9));
+  height: min(100vh, calc(100vw * 9 / 16));
+  border-radius: 10px;
+  box-shadow: 0 18px 80px rgba(0, 0, 0, 0.45);
+}
+
+#mute {
+  position: fixed;
+  right: 16px;
+  bottom: 16px;
+  z-index: 3;
+  min-width: 92px;
+  height: 48px;
+  padding: 0 14px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.55);
+  background: rgba(8, 16, 32, 0.62);
+  color: #f4fbff;
+  font: 700 16px/1 "Trebuchet MS", "Segoe UI", sans-serif;
+  letter-spacing: 0.04em;
+  cursor: pointer;
+  backdrop-filter: blur(8px);
+}
+
+#mute[aria-pressed="true"] {
+  opacity: 0.62;
+}
+
+#test-out {
+  display: none;
+  position: fixed;
+  left: 12px;
+  bottom: 12px;
+  z-index: 4;
+  max-width: min(640px, 70vw);
+  max-height: 40vh;
+  overflow: auto;
+  margin: 0;
+  color: #c8ffc2;
+  font: 13px/1.45 ui-monospace, monospace;
+  white-space: pre-wrap;
+  text-shadow: 0 1px 2px #000;
+}
+
+noscript {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  padding: 24px;
+  text-align: center;
+}
